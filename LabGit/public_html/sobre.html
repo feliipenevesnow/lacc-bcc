@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sobre</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <script src="https://kit.fontawesome.com/2bd3bb0804.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">
+                <img id="imgMargin" width="40" height="40" id="nextPage2" src="img/next2.png" alt=""/>
+            </a>
+            <center>
+                <h1 style="margin-top:-35px;">Sport Club Corinthians Paulista | 1910</h1>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div></center>
+        </nav>
+        <div  style="margin-top:5%;" class="col-md-6 offset-3">
+            <div class="form-row">
+                <div class="form-group col-md-4"><h6>Os títulos do Corinthians marcam a história do futebol brasileiro. O clube é um dos maiores vencedores do país. No total, são 43 taças entre os principais campeonatos disputados por equipes nacionais.</h6><br></div>
+                <div class="form-group col-md-3 offset-3"><center>
+                        <img width="150" height="150" src="img/Timao.png" alt=""/>
+                    </center>
+                    <br></h6><br></div>
+            </div>
+            <hr>
+            <h3>Veja abaixo a lista de todos os títulos da história do Corinthians:</h3><br>
+            <hr>
+            <h4>Quantos títulos mundiais o Corinthians tem?</h4><br>
+            <h6>O Timão venceu o Mundial de Clubes em 2000 e 2012.</h6><br>
+            <hr>
+            <h4>Quantos títulos da Libertadores o Corinthians tem?</h4><br>
+            <h6>O Timão venceu o torneio em 2012.</h6><br>
+            <hr>
+            <h4>Quantos títulos brasileiros o Corinthians tem?</h4><br>
+            <h6>São sete: 1990, 1998, 1999, 2005, 2011, 2015 e 2017.</h6><br>
+            <hr>
+            <h4> Quantos títulos da Copa do Brasil o Corinthians tem?</h4><br>
+            <h6>Três: 1995, 2002 e 2009. O Timão ainda conquistou a Supercopa do Brasil em 1991.</h6><br>
+            <hr>
+            <h4>Quantos títulos paulistas o Corinthians tem?</h4><br>
+            <h6>São 30 (é o maior vencedor): 1914, 1916, 1922, 1923, 1924, 1928, 1929, 1930, 1937, 1938, 1939, 1941, 1951, 1952, 1954, 1977, 1979, 1982, 1983, 1988, 1995, 1997, 1999, 2001, 2003, 2009, 2013, 2017, 2018 e 2019.</h6><br>
+            <hr>
+            <h4>Quantos títulos do Torneio Rio-São Paulo o Corinthians tem?</h4><br>
+            <h6>São cinco: 1950, 1953, 1954, 1966 e 2002.</h6><br>
+            <hr>
+            <h4>Quantos títulos da Copa São Paulo o Corinthians tem?</h4><br>
+            <h6>São dez (é o maior vencedor): 1969, 1970, 1995, 1999, 2004, 2005, 2009,2012, 2015 e 2017).</h6><br>
+            <hr>
+            <h4>Qual é o título que o Corinthians ainda não tem?</h4><br>
+            <h6>O Timão conquistou os principais títulos do futebol brasileiro.</h6><br>
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+        <footer id="footer2">
+            
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ["Mundiais", "Libertadores", "Títulos Brasileiros", "Copa do Brasil", "Título Paulista", "Torneio Rio-São Paulo", "Copa São Paulo"],
+                    datasets: [{
+                            label: 'Premios na carreira',
+                            data: [
+                                2, 1, 7, 3, 30, 5, 10
+                            ],
+                            backgroundColor: [
+                                "rgba(0, 0, 0, 0.2)"
+                            ],
+                            borderColor: [
+                                "rgba(0, 0, 0, 0.5)", "rgba(0, 0, 0, 0.5)", "rgba(0, 0, 0, 0.5)", "rgba(0, 0, 0, 0.5)", "rgba(0, 0, 0, 0.5)", "rgba(0, 0, 0, 0.5)", "rgba(0, 0, 0, 0.5)"
+                            ],
+                            borderWidth: 1
+                        }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                    }
+                }
+            });
+        </script>   
+    </body>
+</html>

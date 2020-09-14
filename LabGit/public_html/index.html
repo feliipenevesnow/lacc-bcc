@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Melhor Time</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body id="body1">
+        <div id="divBody">
+            <center>
+                <img id="imgCentro" width="150" height="150" src="img/Trofeu.png" alt=""/><br>
+                <img id="fogos" width="320" height="220"  style="margin-top:-200px; z-index: 9999;" hidden="true" src="img/Fogos.gif" alt=""/>
+                <br>
+                <button id="botao" onclick="iniciar()" class="btn btn-dark">CLIQUE E VEJA O MELHOR TIME DE FUTE BRASILEIRO</button>        
+            </center>    
+            <a href="sobre.html">
+            <img width="40" height="40" id="nextPage1" src="img/next1.png" alt=""/>
+            </a>
+            <footer class="footer">
+                <center>
+                    <br>
+                    <img  id="imgRuim" hidden="true" src="img/Ruim.gif" alt=""/><br>
+                    <div class="marquee" hidden="true" id="marquee">
+                        <p> <img  src="img/Aguia.gif" alt=""/> </p>
+                    </div>
+                </center>            
+            </footer>
+        </div>
+        <audio id="vaias">
+            <source src="audio/vaias.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="aplausos">
+            <source loop src="audio/aplauso.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="hino">
+            <source loop src="audio/hino.mp3" type="audio/mpeg">
+        </audio>
+        <script>
+            function iniciar() {
+                document.getElementById("imgCentro").src = "img/TimeRuim.png";
+                document.getElementById("imgCentro").className += " swing";
+                document.getElementById("imgRuim").hidden = false;
+                document.getElementById("botao").hidden = true;
+                document.getElementById("vaias").autoplay = true;
+                document.getElementById("vaias").loop = true;
+                document.getElementById("vaias").load();
+                setTimeout(error, 3000);
+            }
+            function error() {
+                var txt;
+                var r = confirm("Ops! Desculpe pelo transtorno! Devido a algum erro, o sistema estava configurado para mostrar o pior time, mas, esta falha foi corrigida neste exato momento! Clique em Ok para continuar e ver realmente o melhor time do Brasil! =D");
+                if (r == true) {
+                    ativar();
+                } else {
+                    alert("Você não tem escolha, não pode cancelar, clique em OK para continuar >:(  ... !");
+                    ativar();
+                }
+            }
+            function ativar() {
+                document.getElementById("imgCentro").src = "img/Timao.png";
+                document.getElementById("imgCentro").className += " cair";
+                document.getElementById("vaias").muted = true;
+                document.getElementById("aplausos").autoplay = true;
+                document.getElementById("hino").autoplay = true;
+                document.getElementById("aplausos").load();
+                document.getElementById("hino").load();
+                document.getElementById("imgRuim").hidden = true;
+                document.getElementById("marquee").hidden = false;
+                setTimeout(ativarFogos, 3000);
+            }
+            function ativarFogos() {
+                document.getElementById("fogos").hidden = false;
+                document.getElementById("divBody").style = "background-image: url('img/confetes.gif');";
+                setTimeout(desligarFogos, 4100);
+            }
+            function desligarFogos() {
+                document.getElementById("fogos").hidden = true;
+            }
+        </script>
+    </body>
+</html>
