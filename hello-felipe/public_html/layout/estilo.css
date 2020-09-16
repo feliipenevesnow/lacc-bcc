@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15 de set. de 2020, 22:30:53
+    Author     : felii
+*/
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: "Exo", sans-serif;
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab );
+    background-size: 400% 400%;
+    -webkit-animation: gradientBG 10s ease infinite;
+    animation: gradientBG 10s ease infinite;
+}
+.contorno{
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #fff;
+    font-size: 7em; color: #fffdd9;
+    color: transparent;  
+}
+.container {
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    text-align: center;
+}
+h1 {
+    font-weight: 900;
+}
+a {
+    text-decoration: none;
+    color: #212121;
+}
+#footer{
+    bottom: 0;
+    position: absolute;
+}
+p {
+    font-family: Times New Roman;
+}
+@-webkit-keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
